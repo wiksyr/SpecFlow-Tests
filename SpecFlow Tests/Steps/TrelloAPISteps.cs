@@ -31,12 +31,27 @@ public class TrelloAPISteps
         _request = GetRestRequestWithAuthorization();
     }
 
+    [Given(@"request without authorization")]
+    public void GivenRequestWithoutAuthorization()
+    {
+        _request = GetRestRequestWithoutAuthorization();
+    }
+
     [Given(@"request has url segments:")]
     public void GivenRequestHasUrlSegments(Table urlSegments)
     {
         foreach (var row in urlSegments.Rows)
         {
             _request.AddUrlSegment(row["name"], row["value"]);
+        }
+    }
+
+    [Given(@"request has query parameters:")]
+    public void GivenRequestHasQueryParameters(Table queryParameters)
+    {
+        foreach (var row in queryParameters.Rows)
+        {
+            _request.AddQueryParameter(row["name"], row["value"]);
         }
     }
 

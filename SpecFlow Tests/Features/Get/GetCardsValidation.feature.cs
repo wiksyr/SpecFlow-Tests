@@ -121,6 +121,173 @@ this.ScenarioInitialize(scenarioInfo);
             }
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Get Cards In A List Authorization Validation")]
+        [NUnit.Framework.TestCaseAttribute("5db25c32469ff85185d010c9b2736345", "invalid_token", "invalid app token", null)]
+        [NUnit.Framework.TestCaseAttribute("invalid_key", "ATTA4af94b6e84868b13ca0a02b030c78f04d55c679edd1fe1d33a9f5f269b1f36f0DEB27D05", "invalid key", null)]
+        [NUnit.Framework.TestCaseAttribute("", "", "unauthorized", null)]
+        public void GetCardsInAListAuthorizationValidation(string key, string token, string errorMessage, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("key", key);
+            argumentsOfScenario.Add("token", token);
+            argumentsOfScenario.Add("errorMessage", errorMessage);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get Cards In A List Authorization Validation", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 20
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 21
+ testRunner.Given("request without authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "name",
+                            "value"});
+                table4.AddRow(new string[] {
+                            "id",
+                            "6a8c73244a9a844697f317f2"});
+#line 22
+ testRunner.And("request has url segments:", ((string)(null)), table4, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                            "name",
+                            "value"});
+                table5.AddRow(new string[] {
+                            "key",
+                            string.Format("{0}", key)});
+                table5.AddRow(new string[] {
+                            "token",
+                            string.Format("{0}", token)});
+#line 25
+ testRunner.And("request has query parameters:", ((string)(null)), table5, "And ");
+#line hidden
+#line 29
+ testRunner.When("I send a \'Get\' request to the Trello API \'/1/lists/{id}/cards\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 30
+ testRunner.Then("I receive an Unauthorized response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 31
+ testRunner.And(string.Format("I receive an error message \'{0}\'", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Get Cards By Id Id Validation")]
+        [NUnit.Framework.TestCaseAttribute("invalid_id", "BadRequest", "invalid id", null)]
+        [NUnit.Framework.TestCaseAttribute("6a8c73244a9a844697f31821", "NotFound", "not found", null)]
+        public void GetCardsByIdIdValidation(string id, string responseCode, string errorMessage, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("id", id);
+            argumentsOfScenario.Add("responseCode", responseCode);
+            argumentsOfScenario.Add("errorMessage", errorMessage);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get Cards By Id Id Validation", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 38
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 39
+ testRunner.Given("request with authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                            "name",
+                            "value"});
+                table6.AddRow(new string[] {
+                            "id",
+                            string.Format("{0}", id)});
+#line 40
+ testRunner.And("request has url segments:", ((string)(null)), table6, "And ");
+#line hidden
+#line 43
+ testRunner.When("I send a \'Get\' request to the Trello API \'/1/cards/{id}\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 44
+ testRunner.Then(string.Format("I receive an {0} response", responseCode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 45
+ testRunner.And(string.Format("I receive an error message \'{0}\'", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Get Cards By Id Authorization Validation")]
+        [NUnit.Framework.TestCaseAttribute("5db25c32469ff85185d010c9b2736345", "invalid_token", "invalid app token", null)]
+        [NUnit.Framework.TestCaseAttribute("invalid_key", "ATTA4af94b6e84868b13ca0a02b030c78f04d55c679edd1fe1d33a9f5f269b1f36f0DEB27D05", "invalid key", null)]
+        [NUnit.Framework.TestCaseAttribute("", "", "unauthorized", null)]
+        public void GetCardsByIdAuthorizationValidation(string key, string token, string errorMessage, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("key", key);
+            argumentsOfScenario.Add("token", token);
+            argumentsOfScenario.Add("errorMessage", errorMessage);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get Cards By Id Authorization Validation", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 51
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 52
+ testRunner.Given("request without authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                            "name",
+                            "value"});
+                table7.AddRow(new string[] {
+                            "id",
+                            "6a8c73244a9a844697f31824"});
+#line 53
+ testRunner.And("request has url segments:", ((string)(null)), table7, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                            "name",
+                            "value"});
+                table8.AddRow(new string[] {
+                            "key",
+                            string.Format("{0}", key)});
+                table8.AddRow(new string[] {
+                            "token",
+                            string.Format("{0}", token)});
+#line 56
+ testRunner.And("request has query parameters:", ((string)(null)), table8, "And ");
+#line hidden
+#line 60
+ testRunner.When("I send a \'Get\' request to the Trello API \'/1/cards/{id}\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 61
+ testRunner.Then("I receive an Unauthorized response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 62
+ testRunner.And(string.Format("I receive an error message \'{0}\'", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
