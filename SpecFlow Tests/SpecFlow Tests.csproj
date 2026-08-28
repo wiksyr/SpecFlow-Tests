@@ -27,10 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="Resources\Schemas\get_card.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
