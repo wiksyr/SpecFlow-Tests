@@ -5,9 +5,16 @@ using TechTalk.SpecFlow;
 namespace SpecFlow_Tests.Steps;
 
 [Binding]
-public class TrelloAPIActionSteps : TestContext
+public class TrelloAPIActionSteps
 {
     private static RestClient _client = new RestClient("https://api.trello.com");
+
+    private readonly TestContext _testContext;
+
+    public TrelloAPIActionSteps(TestContext testContext)
+    {
+        _testContext = testContext;
+    }
 
     protected RestRequest GetRestRequestWithAuthorization()
     {
@@ -23,13 +30,13 @@ public class TrelloAPIActionSteps : TestContext
     [Given(@"request with authorization")]
     public void GivenRequestWithAuthorization()
     {
-        SetRequest(GetRestRequestWithAuthorization());
+        _testContext.Request = GetRestRequestWithAuthorization();
     }
 
     [Given(@"request without authorization")]
     public void GivenRequestWithoutAuthorization()
     {
-        SetRequest(GetRestRequestWithoutAuthorization());
+        _testContext.Request = GetRestRequestWithoutAuthorization();
     }
 
     [Given(@"request has url segments:")]
@@ -37,7 +44,7 @@ public class TrelloAPIActionSteps : TestContext
     {
         foreach (var row in urlSegments.Rows)
         {
-            SetRequest(GetRequest().AddUrlSegment(row["name"], row["value"]));
+            _testContext.Request = _testContext.Request.AddUrlSegment(row["name"], row["value"]);
         }
     }
 
@@ -46,14 +53,14 @@ public class TrelloAPIActionSteps : TestContext
     {
         foreach (var row in queryParameters.Rows)
         {
-            SetRequest(GetRequest().AddQueryParameter(row["name"], row["value"]));
+            _testContext.Request = _testContext.Request.AddQueryParameter(row["name"], row["value"]);
         }
     }
 
     [When(@"I send a '(.*)' request to the Trello API '(.*)' endpoint")]
     public void WhenISendRequestToCardsEndpoint(string method, string url)
     {
-        SetRequest(GetRequest().WithMethod(method).WithResource(url));
-        SetResponse(_client.ExecuteAsync(GetRequest()).Result);
+        _testContext.Request = _testContext.Request.WithMethod(method).WithResource(url);
+        _testContext.Response = _client.ExecuteAsync(_testContext.Request).Result;
     }
 }
