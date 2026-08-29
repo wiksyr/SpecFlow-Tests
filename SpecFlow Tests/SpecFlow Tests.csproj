@@ -33,10 +33,13 @@
     <None Update="Resources\Schemas\get_cards.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Schemas\post_card.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Post\" />
+    <Folder Include="Features\Put\" />
   </ItemGroup>
 
 </Project>

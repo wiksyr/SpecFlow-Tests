@@ -34,4 +34,14 @@ public class TrelloAPIAssertSteps
     {
         Assert.That(_testContext.Response.Content, Does.Contain(errorMessage));
     }
+
+    [Then(@"I receive an '(.*)' in the response")]
+    public void ThenIReceiveAnIdInTheResponse(string fieldName)
+    {
+        var responseContent = JToken.Parse(_testContext.Response.Content!);
+
+        Assert.That(responseContent[fieldName], Is.Not.Null);
+
+        _testContext.CreatedCardId = responseContent[fieldName]!.ToString();
+    }
 }
