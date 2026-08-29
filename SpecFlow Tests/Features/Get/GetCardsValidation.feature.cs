@@ -100,14 +100,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.Given("request with authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "value"});
-                table3.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "id",
                             string.Format("{0}", id)});
 #line 8
- testRunner.And("request has url segments:", ((string)(null)), table3, "And ");
+ testRunner.And("request has url segments:", ((string)(null)), table8, "And ");
 #line hidden
 #line 11
  testRunner.When("I send a \'Get\' request to the Trello API \'/1/lists/{id}/cards\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -148,26 +148,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 21
  testRunner.Given("request without authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "value"});
-                table4.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             "id",
                             "6a8c73244a9a844697f317f2"});
 #line 22
- testRunner.And("request has url segments:", ((string)(null)), table4, "And ");
+ testRunner.And("request has url segments:", ((string)(null)), table9, "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "value"});
-                table5.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "key",
                             string.Format("{0}", key)});
-                table5.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "token",
                             string.Format("{0}", token)});
 #line 25
- testRunner.And("request has query parameters:", ((string)(null)), table5, "And ");
+ testRunner.And("request has query parameters:", ((string)(null)), table10, "And ");
 #line hidden
 #line 29
  testRunner.When("I send a \'Get\' request to the Trello API \'/1/lists/{id}/cards\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -207,14 +207,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 39
  testRunner.Given("request with authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "value"});
-                table6.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "id",
                             string.Format("{0}", id)});
 #line 40
- testRunner.And("request has url segments:", ((string)(null)), table6, "And ");
+ testRunner.And("request has url segments:", ((string)(null)), table11, "And ");
 #line hidden
 #line 43
  testRunner.When("I send a \'Get\' request to the Trello API \'/1/cards/{id}\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -255,26 +255,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 52
  testRunner.Given("request without authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "value"});
-                table7.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "id",
                             "6a8c73244a9a844697f31824"});
 #line 53
- testRunner.And("request has url segments:", ((string)(null)), table7, "And ");
+ testRunner.And("request has url segments:", ((string)(null)), table12, "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "value"});
-                table8.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "key",
                             string.Format("{0}", key)});
-                table8.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "token",
                             string.Format("{0}", token)});
 #line 56
- testRunner.And("request has query parameters:", ((string)(null)), table8, "And ");
+ testRunner.And("request has query parameters:", ((string)(null)), table13, "And ");
 #line hidden
 #line 60
  testRunner.When("I send a \'Get\' request to the Trello API \'/1/cards/{id}\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

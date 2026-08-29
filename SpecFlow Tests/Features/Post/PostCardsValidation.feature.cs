@@ -100,17 +100,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.Given("request with authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "value"});
-                table11.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "idList",
                             string.Format("{0}", id)});
-                table11.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "name",
                             "Test Create Card"});
 #line 8
- testRunner.And("request has query parameters:", ((string)(null)), table11, "And ");
+ testRunner.And("request has query parameters:", ((string)(null)), table16, "And ");
 #line hidden
 #line 12
  testRunner.When("I send a \'Post\' request to the Trello API \'CreateCard\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -151,23 +151,23 @@ this.ScenarioInitialize(scenarioInfo);
 #line 22
  testRunner.Given("request without authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "value"});
-                table12.AddRow(new string[] {
+                table17.AddRow(new string[] {
                             "key",
                             string.Format("{0}", key)});
-                table12.AddRow(new string[] {
+                table17.AddRow(new string[] {
                             "token",
                             string.Format("{0}", token)});
-                table12.AddRow(new string[] {
+                table17.AddRow(new string[] {
                             "idList",
                             "6a8c73244a9a844697f317f2"});
-                table12.AddRow(new string[] {
+                table17.AddRow(new string[] {
                             "name",
                             "Test Create Card"});
 #line 23
- testRunner.And("request has query parameters:", ((string)(null)), table12, "And ");
+ testRunner.And("request has query parameters:", ((string)(null)), table17, "And ");
 #line hidden
 #line 29
  testRunner.When("I send a \'Post\' request to the Trello API \'CreateCard\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

@@ -42,6 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Delete\" />
     <Folder Include="Features\Put\" />
   </ItemGroup>
 

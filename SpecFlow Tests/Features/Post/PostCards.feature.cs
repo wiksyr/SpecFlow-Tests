@@ -96,17 +96,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 9
  testRunner.Given("request with authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "value"});
-                table9.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "name",
                             "Test Card"});
-                table9.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "idList",
                             "6a8c73244a9a844697f317f2"});
 #line 10
- testRunner.And("request has query parameters:", ((string)(null)), table9, "And ");
+ testRunner.And("request has query parameters:", ((string)(null)), table14, "And ");
 #line hidden
 #line 14
  testRunner.When("I send a \'Post\' request to the Trello API \'CreateCard\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -123,14 +123,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 19
  testRunner.Given("request with authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "value"});
-                table10.AddRow(new string[] {
+                table15.AddRow(new string[] {
                             "id",
                             "created_card_id"});
 #line 20
- testRunner.And("request has url segments:", ((string)(null)), table10, "And ");
+ testRunner.And("request has url segments:", ((string)(null)), table15, "And ");
 #line hidden
 #line 23
  testRunner.When("I send a \'Get\' request to the Trello API \'GetCard\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

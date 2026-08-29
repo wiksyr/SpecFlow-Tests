@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SpecFlow_Tests.Features.Put
+namespace SpecFlow_Tests.Features.Delete
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,24 +20,24 @@ namespace SpecFlow_Tests.Features.Put
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Put Cards Validation")]
-    public partial class PutCardsValidationFeature
+    [NUnit.Framework.DescriptionAttribute("Delete Cards Validation")]
+    public partial class DeleteCardsValidationFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "PutCardsValidation.feature"
+#line 1 "DeleteCardsValidation.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Put", "Put Cards Validation", "\tAs a Trello API user \r\n\tI want to validate the endpoints for put cards \r\n\tSo tha" +
-                    "t I can confirm that they are working only with expected inputs and have authori" +
-                    "zation mechanism", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Delete", "Delete Cards Validation", "\tAs a Trello API user \r\n\tI want to validate the endpoints for delete cards \r\n\tSo " +
+                    "that I can confirm that they are working only with expected inputs and have auth" +
+                    "orization mechanism", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,17 +76,17 @@ namespace SpecFlow_Tests.Features.Put
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Put Cards Id Validation")]
+        [NUnit.Framework.DescriptionAttribute("Delete Cards Id Validation")]
         [NUnit.Framework.TestCaseAttribute("invalid_id", "BadRequest", "invalid id", null)]
         [NUnit.Framework.TestCaseAttribute("6a8c73244a9a844697f317f1", "NotFound", "not found", null)]
-        public void PutCardsIdValidation(string id, string responseCode, string errorMessage, string[] exampleTags)
+        public void DeleteCardsIdValidation(string id, string responseCode, string errorMessage, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("id", id);
             argumentsOfScenario.Add("responseCode", responseCode);
             argumentsOfScenario.Add("errorMessage", errorMessage);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Put Cards Id Validation", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete Cards Id Validation", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -100,17 +100,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.Given("request with authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "value"});
-                table21.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "id",
                             string.Format("{0}", id)});
 #line 8
- testRunner.And("request has url segments:", ((string)(null)), table21, "And ");
+ testRunner.And("request has url segments:", ((string)(null)), table3, "And ");
 #line hidden
 #line 11
- testRunner.When("I send a \'Put\' request to the Trello API \'UpdateCard\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I send a \'Delete\' request to the Trello API \'DeleteCard\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 12
  testRunner.Then(string.Format("I receive an {0} response", responseCode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -123,18 +123,18 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Put Cards Authorization Validation")]
+        [NUnit.Framework.DescriptionAttribute("Delete Cards Authorization Validation")]
         [NUnit.Framework.TestCaseAttribute("5db25c32469ff85185d010c9b2736345", "invalid_token", "invalid app token", null)]
         [NUnit.Framework.TestCaseAttribute("invalid_key", "ATTA4af94b6e84868b13ca0a02b030c78f04d55c679edd1fe1d33a9f5f269b1f36f0DEB27D05", "invalid key", null)]
         [NUnit.Framework.TestCaseAttribute("", "", "missing scopes", null)]
-        public void PutCardsAuthorizationValidation(string key, string token, string errorMessage, string[] exampleTags)
+        public void DeleteCardsAuthorizationValidation(string key, string token, string errorMessage, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("key", key);
             argumentsOfScenario.Add("token", token);
             argumentsOfScenario.Add("errorMessage", errorMessage);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Put Cards Authorization Validation", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete Cards Authorization Validation", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -148,32 +148,32 @@ this.ScenarioInitialize(scenarioInfo);
 #line 21
  testRunner.Given("request without authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "value"});
-                table22.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "key",
                             string.Format("{0}", key)});
-                table22.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "token",
                             string.Format("{0}", token)});
-                table22.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "name",
                             "Test Create Card"});
 #line 22
- testRunner.And("request has query parameters:", ((string)(null)), table22, "And ");
+ testRunner.And("request has query parameters:", ((string)(null)), table4, "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "value"});
-                table23.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "id",
-                            "6a8c73244a9a844697f31824"});
+                            "6a8c73254a9a844697f3185e"});
 #line 27
- testRunner.And("request has url segments:", ((string)(null)), table23, "And ");
+ testRunner.And("request has url segments:", ((string)(null)), table5, "And ");
 #line hidden
 #line 30
- testRunner.When("I send a \'Put\' request to the Trello API \'UpdateCard\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I send a \'Delete\' request to the Trello API \'DeleteCard\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 31
  testRunner.Then("I receive an Unauthorized response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
