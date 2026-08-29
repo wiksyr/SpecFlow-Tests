@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SpecFlow_Tests.Features.Post
+namespace SpecFlow_Tests.Features.Put
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,23 +20,23 @@ namespace SpecFlow_Tests.Features.Post
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("PostCards")]
-    public partial class PostCardsFeature
+    [NUnit.Framework.DescriptionAttribute("Put Cards")]
+    public partial class PutCardsFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "PostCards.feature"
+#line 1 "PutCards.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Post", "PostCards", "\tAs a Trello API user \r\n\tI want to use POST \'/1/cards\' endpoint \r\n\tSo that I coul" +
-                    "d create the card and validate its existance", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Put", "Put Cards", "\tAs a Trello API User\r\n\tI want to execute the PUT Cards endpoint \r\n\tSo that I cou" +
+                    "ld update the given by Id card", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,15 +75,17 @@ namespace SpecFlow_Tests.Features.Post
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Check Post Cards")]
+        [NUnit.Framework.DescriptionAttribute("Check Put Cards")]
+        [NUnit.Framework.CategoryAttribute("CreateCard")]
         [NUnit.Framework.CategoryAttribute("DeleteCard")]
-        public void CheckPostCards()
+        public void CheckPutCards()
         {
             string[] tagsOfScenario = new string[] {
+                    "CreateCard",
                     "DeleteCard"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Post Cards", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 7
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Put Cards", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -93,50 +95,56 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 9
- testRunner.Given("request with authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
-                            "name",
-                            "value"});
-                table9.AddRow(new string[] {
-                            "name",
-                            "Test Card"});
-                table9.AddRow(new string[] {
-                            "idList",
-                            "6a8c73244a9a844697f317f2"});
 #line 10
- testRunner.And("request has query parameters:", ((string)(null)), table9, "And ");
-#line hidden
-#line 14
- testRunner.When("I send a \'Post\' request to the Trello API \'CreateCard\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 15
- testRunner.Then("I receive an OK response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 16
- testRunner.And("I receive a response matching the schema \'post_card.json\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 17
- testRunner.And("I receive an \'id\' in the response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 19
  testRunner.Given("request with authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "value"});
-                table10.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "id",
                             "created_card_id"});
-#line 20
- testRunner.And("request has url segments:", ((string)(null)), table10, "And ");
+#line 11
+ testRunner.And("request has url segments:", ((string)(null)), table13, "And ");
 #line hidden
-#line 23
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                            "name",
+                            "value"});
+                table14.AddRow(new string[] {
+                            "name",
+                            "Updated Card Name"});
+#line 14
+ testRunner.And("request has query parameters:", ((string)(null)), table14, "And ");
+#line hidden
+#line 17
+ testRunner.When("I send a \'Put\' request to the Trello API \'UpdateCard\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 18
+ testRunner.Then("I receive an OK response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 19
+ testRunner.And("I receive a response matching the schema \'put_cards.json\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 21
+ testRunner.Given("request with authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+                            "name",
+                            "value"});
+                table15.AddRow(new string[] {
+                            "id",
+                            "created_card_id"});
+#line 22
+ testRunner.And("request has url segments:", ((string)(null)), table15, "And ");
+#line hidden
+#line 25
  testRunner.When("I send a \'Get\' request to the Trello API \'GetCard\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 24
+#line 26
  testRunner.Then("I receive an OK response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 27
+ testRunner.And("The \'name\' attribute is updated to \'Updated Card Name\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json.Schema;
-using RestSharp;
+﻿using RestSharp;
 using SpecFlow_Tests.Consts;
 using SpecFlow_Tests.Extensions;
 using SpecFlow_Tests.Utils;

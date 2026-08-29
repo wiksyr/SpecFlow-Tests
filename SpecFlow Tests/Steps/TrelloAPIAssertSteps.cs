@@ -35,13 +35,29 @@ public class TrelloAPIAssertSteps
         Assert.That(_testContext.Response.Content, Does.Contain(errorMessage));
     }
 
-    [Then(@"I receive an '(.*)' in the response")]
-    public void ThenIReceiveAnIdInTheResponse(string fieldName)
+    [Then(@"I receive an 'id' in the response")]
+    public void ThenIReceiveAnIdInTheResponse()
     {
+        var fieldName = "id";
+
         var responseContent = JToken.Parse(_testContext.Response.Content!);
 
         Assert.That(responseContent[fieldName], Is.Not.Null);
 
         _testContext.CreatedCardId = responseContent[fieldName]!.ToString();
+    }
+
+    [Then(@"I receive (.*) response body")]
+    public void ThenIReceiveExpectedResponseBody(string expectedResponseBody)
+    {
+        expectedResponseBody = expectedResponseBody == "empty" ? string.Empty : expectedResponseBody;
+        Assert.That(_testContext.Response.Content, Is.EqualTo(expectedResponseBody));
+    }
+
+    [Then(@"The '(.*)' attribute is updated to '(.*)'")]
+    public void ThenAttributeIsUpdated(string attributeName, string expectedValue)
+    {
+        var responseContent = JToken.Parse(_testContext.Response.Content!);
+        Assert.That(responseContent[attributeName]!.ToString(), Is.EqualTo(expectedValue));
     }
 }

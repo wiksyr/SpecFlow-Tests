@@ -3,7 +3,7 @@
 	I want to use POST '/1/cards' endpoint 
 	So that I could create the card and validate its existance
 
-@CreateCard
+@DeleteCard
 Scenario: Check Post Cards
 	#Create a new card in a list
 	Given request with authorization

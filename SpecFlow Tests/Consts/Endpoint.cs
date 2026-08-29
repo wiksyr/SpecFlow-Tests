@@ -15,11 +15,11 @@ public static class EndpointExtensions
     {
         return endpoint switch
         {
-            Endpoint.GetCard => "/1/cards/{id}",
-            Endpoint.GetCards => "/1/lists/{id}/cards",
-            Endpoint.CreateCard => "/1/cards",
-            Endpoint.UpdateCard => "/1/cards/{id}",
-            Endpoint.DeleteCard => "/1/cards/{id}",
+            Endpoint.GetCard => CardsEndpoints.GetCardById,
+            Endpoint.GetCards => CardsEndpoints.GetCardsInList,
+            Endpoint.CreateCard => CardsEndpoints.PostCards,
+            Endpoint.UpdateCard => CardsEndpoints.PutCardById,
+            Endpoint.DeleteCard => CardsEndpoints.DeleteCardById,
             _ => throw new ArgumentOutOfRangeException(nameof(endpoint), endpoint, null)
         };
     }
