@@ -11,7 +11,7 @@ Scenario: Get Trello Cards In A List
 	And request has url segments:
 		| name | value |
 		| id   | 6a8c73244a9a844697f317f2 |
-	When I send a 'Get' request to the Trello API '/1/lists/{id}/cards' endpoint
+	When I send a 'Get' request to the Trello API 'GetCards' endpoint
 	Then I receive an OK response
 	And I receive a response matching the schema 'get_cards.json'
 
@@ -20,6 +20,6 @@ Scenario: Get Trello Card By Id
 	And request has url segments:
 		| name | value |
 		| id   | 6a8c73244a9a844697f31824 |
-	When I send a 'Get' request to the Trello API '/1/cards/{id}' endpoint
+	When I send a 'Get' request to the Trello API 'GetCard' endpoint
 	Then I receive an OK response
 	And I receive a response matching the schema 'get_card.json'

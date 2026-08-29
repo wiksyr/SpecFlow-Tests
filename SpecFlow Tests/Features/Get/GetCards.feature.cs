@@ -115,7 +115,7 @@ this.FeatureBackground();
  testRunner.And("request has url segments:", ((string)(null)), table1, "And ");
 #line hidden
 #line 14
- testRunner.When("I send a \'Get\' request to the Trello API \'/1/lists/{id}/cards\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I send a \'Get\' request to the Trello API \'GetCards\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 15
  testRunner.Then("I receive an OK response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -159,7 +159,7 @@ this.FeatureBackground();
  testRunner.And("request has url segments:", ((string)(null)), table2, "And ");
 #line hidden
 #line 23
- testRunner.When("I send a \'Get\' request to the Trello API \'/1/cards/{id}\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I send a \'Get\' request to the Trello API \'GetCard\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 24
  testRunner.Then("I receive an OK response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

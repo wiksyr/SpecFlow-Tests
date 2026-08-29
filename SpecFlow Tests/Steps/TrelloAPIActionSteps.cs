@@ -1,4 +1,5 @@
 ﻿using RestSharp;
+using SpecFlow_Tests.Consts;
 using SpecFlow_Tests.Extensions;
 using TechTalk.SpecFlow;
 
@@ -27,16 +28,10 @@ public class TrelloAPIActionSteps
         return new RestRequest();
     }
 
-    [Given(@"request with authorization")]
-    public void GivenRequestWithAuthorization()
+    [Given(@"request (with|without) authorization")]
+    public void GivenRequestWithAuthorization(bool withAuthorization)
     {
-        _testContext.Request = GetRestRequestWithAuthorization();
-    }
-
-    [Given(@"request without authorization")]
-    public void GivenRequestWithoutAuthorization()
-    {
-        _testContext.Request = GetRestRequestWithoutAuthorization();
+        _testContext.Request = withAuthorization ? GetRestRequestWithAuthorization() : GetRestRequestWithoutAuthorization();
     }
 
     [Given(@"request has url segments:")]
@@ -58,9 +53,9 @@ public class TrelloAPIActionSteps
     }
 
     [When(@"I send a '(.*)' request to the Trello API '(.*)' endpoint")]
-    public void WhenISendRequestToCardsEndpoint(string method, string url)
+    public void WhenISendRequestToCardsEndpoint(string method, Endpoint endpoint)
     {
-        _testContext.Request = _testContext.Request.WithMethod(method).WithResource(url);
+        _testContext.Request = _testContext.Request.WithMethod(method).WithResource(endpoint.GetEndpointUrl());
         _testContext.Response = _client.ExecuteAsync(_testContext.Request).Result;
     }
 }
